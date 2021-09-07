@@ -1,3 +1,4 @@
+version: 0.2
 --- 
 phases: 
   build: 
@@ -6,4 +7,4 @@ phases:
       - "echo Building the Docker image..."
       - "docker build -t test/blue-green ."
       - "docker tag test/blue-green test/blue-green:latest"
-version: 0.1
+
