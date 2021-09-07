@@ -6,13 +6,4 @@ phases:
       - "echo Building the Docker image..."
       - "docker build -t test/blue-green ."
       - "docker tag test/blue-green test/blue-green:latest"
-  post_build: 
-    commands: 
-      - "echo Build completed on `date`"
-      - "echo Pushing the Docker image..."
-      - "docker push test/blue-green:latest"
-  pre_build: 
-    commands: 
-      - "echo Logging in to Docker Hub..."
-      - "docker login --username=\"test\" --password=\"password\""
 version: 0.1
